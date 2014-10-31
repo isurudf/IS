@@ -12,8 +12,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.HashSet;
 import org.apache.commons.net.ftp.FTPClient;
+import org.apache.jasper.tagplugins.jstl.core.ForEach;
 import org.fiontar.admin.Company.Company;
 import org.fiontar.admin.Company.CompanyDA;
 import org.fiontar.api.Database.DatabaseConnectionHandler;
@@ -47,14 +49,31 @@ public class Assign {
         UndergradDA.list = listUndergrad;
         ArrayList<Company> listCompany = CompanyDA.getCompany();
         
-        ArrayList<ug> listUndergradById = null;
-        ArrayList<cmp> listCompanyById = null;
+        HashMap<Integer, Undergrad> mapUndergrad = UndergradDA.getAllUnderGradMap();
+        
+         
+        //creating cmp arraylist
+        HashMap<Integer, Company> mapCmp = null; 
+        for(int i=0;i<listCompany.size();i++){
+        	Company c = listCompany.get(i);
+        	Integer id  = c.getId();
+        	
+        	
+        }
+        
+        
+        
+        
         //Adding preferred undergraduates to companies
         for(int i=0;i<listCompanyById.size();i++ ){
         	cmp c = listCompanyById.get(i);
-        	if(c!=null){
-        		String ugs = c.getUndergrads();
-        		ugs.split(",");
+        	if(c!=null){ 
+        		String[] ugs = c.getUndergrads().split(",");
+        		for(int j=0;j<ugs.length;j++){
+        			Integer id = Integer.parseInt(ugs[i]);
+        			Undergrad u1 = mapUndergrad.get(id);
+        			c.prefUndergrads.add(u1);
+        		}
         		
         	}
         	

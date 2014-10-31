@@ -2,6 +2,7 @@ package org.fiontar.admin.algo;
 
 import java.util.ArrayList;
 import org.fiontar.admin.Company.Company;
+import org.fiontar.registration.Undergrad;
 
 public class cmp {
 
@@ -12,6 +13,7 @@ public class cmp {
     String undergrads;
     boolean[] field = new boolean[16];
     double[] fieldRating = new double[16];
+    public ArrayList<Undergrad> prefUndergrads = new ArrayList<Undergrad>();
     public ArrayList<ug> list = new ArrayList<ug>();
     public ArrayList<ug> pref = new ArrayList<ug>();
 
