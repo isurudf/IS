@@ -53,33 +53,28 @@ public class Assign {
         
          
         //creating cmp arraylist
-        HashMap<Integer, Company> mapCmp = null; 
+        HashMap<Integer, cmp> mapCmp = new HashMap<Integer, cmp>(); 
         for(int i=0;i<listCompany.size();i++){
         	Company c = listCompany.get(i);
         	Integer id  = c.getId();
-        	
-        	
-        }
-        
-        
-        
+        	cmp cmp1 = new cmp(c);
+        	      	
         
         //Adding preferred undergraduates to companies
-        for(int i=0;i<listCompanyById.size();i++ ){
-        	cmp c = listCompanyById.get(i);
-        	if(c!=null){ 
         		String[] ugs = c.getUndergrads().split(",");
         		for(int j=0;j<ugs.length;j++){
-        			Integer id = Integer.parseInt(ugs[i]);
-        			Undergrad u1 = mapUndergrad.get(id);
-        			c.prefUndergrads.add(u1);
+        			Integer id2 = Integer.parseInt(ugs[i]);
+        			Undergrad u1 = mapUndergrad.get(id2);
+        			cmp1.prefUndergrads.add(u1);
         		}
         		
-        	}
-        	
-        }
+        		mapCmp.put(id, cmp1); 
+        }	
         
-
+        
+        //methana idan algo eka gahapan
+        
+        
         for (int i = 0; i < 16; i++) {
             arrCmpByField.add(new ArrayList<cmp>());
         }
