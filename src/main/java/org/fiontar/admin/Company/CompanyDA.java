@@ -85,12 +85,12 @@ public class CompanyDA {
                         rs.getInt("capacity"),
                         rs.getString("building"),
                         rs.getString("tel"),
-                        rs.getString("buildTel")
+                        rs.getString("buildTel"),
+                        rs.getString("undergrads")
                         );
                 CompanyList.add(item);
             }
             Comparator<Company> comparator = new Comparator<Company>() {
-                @Override
                 public int compare(Company n1, Company n2) {
                     return n1.getName().toUpperCase().compareTo(n2.getName().toUpperCase());
                 }

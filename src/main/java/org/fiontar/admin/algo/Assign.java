@@ -46,6 +46,20 @@ public class Assign {
         ArrayList<Undergrad> listUndergrad = UndergradDA.getAllUnderGrads();
         UndergradDA.list = listUndergrad;
         ArrayList<Company> listCompany = CompanyDA.getCompany();
+        
+        ArrayList<ug> listUndergradById = null;
+        ArrayList<cmp> listCompanyById = null;
+        //Adding preferred undergraduates to companies
+        for(int i=0;i<listCompanyById.size();i++ ){
+        	cmp c = listCompanyById.get(i);
+        	if(c!=null){
+        		String ugs = c.getUndergrads();
+        		ugs.split(",");
+        		
+        	}
+        	
+        }
+        
 
         for (int i = 0; i < 16; i++) {
             arrCmpByField.add(new ArrayList<cmp>());
@@ -154,7 +168,6 @@ public class Assign {
         list.addAll(Arrays.asList(arrUG));
 
         Comparator<ug> comparator = new Comparator<ug>() {
-            @Override
             public int compare(ug u1, ug u2) {
                 if(u1.u.getCompanies().length()<2)
                     return 1;
@@ -174,7 +187,6 @@ public class Assign {
     public static void sortUGByName(ArrayList<ug> list) {
 
         Comparator<ug> comparator = new Comparator<ug>() {
-            @Override
             public int compare(ug u1, ug u2) {
                 if (u1.field == u2.field) {
                     return u1.getName().compareTo(u2.getName());

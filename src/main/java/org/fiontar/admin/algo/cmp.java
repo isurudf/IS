@@ -9,6 +9,7 @@ public class cmp {
     int capacity;
     String fields;
     String name;
+    String undergrads;
     boolean[] field = new boolean[16];
     double[] fieldRating = new double[16];
     public ArrayList<ug> list = new ArrayList<ug>();
@@ -26,10 +27,15 @@ public class cmp {
                 Assign.arrCmpByField.get(i).add(this);
             }
         }
+        undergrads = c.getUndergrads();
+    
     }
 
     public String getName() {
         return c.getName();
+    }
+    public String getUndergrads() {
+	    return undergrads;
     }
     
 }

@@ -10,6 +10,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
+
 import org.fiontar.admin.algo.Assign;
 import org.fiontar.registration.Undergrad;
 
@@ -163,6 +165,31 @@ public class UndergradDA {
         }
         return underGradList;
     }
+    public static HashMap<Integer, Undergrad> getAllUnderGradMap() {
+    	HashMap<Integer, Undergrad> underGradList = new HashMap<Integer, Undergrad>();
+        try {
+            DatabaseConnectionHandler.closeConnection();
+            Connection con = DatabaseConnectionHandler.createConnection();
+
+            String queryCheck = "SELECT * FROM undergrad ORDER BY id";
+
+            PreparedStatement ps = con.prepareStatement(queryCheck);
+
+            ResultSet rs = ps.executeQuery();
+            Undergrad s;
+
+            while (rs.next()) {
+                s = getUndergradFromRS(rs);
+                underGradList.put(s.getId(), s);
+
+            }
+            con.close();
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return underGradList;
+    }
+
 /*    public static ArrayList<Undergrad> getAllUnderGradsPreferred(String company) {
         ArrayList<Undergrad> underGradList = new ArrayList<Undergrad>();
         try {
