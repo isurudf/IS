@@ -1,0 +1,34 @@
+
+package org.fiontar.api.Database;
+
+/**
+ *
+ * @author Madawa
+ */
+public class Constants {
+
+    public static final String DRIVER_NAME = "com.mysql.jdbc.Driver";
+    
+    /*public static final String DB_URL = "jdbc:mysql://us-cdbr-east-05.cleardb.net:3306/heroku_bbb7cce486a618f?reconnect=true";
+    public static final String DB_USERNAME = "bc034aaf56e885";
+    public static final String DB_PASSWORD = "0ee89db7";*/
+    
+    public static final String DB_URL = "jdbc:mysql://localhost/is";
+    public static final String DB_USERNAME = "root";
+    public static final String DB_PASSWORD = "123";
+    
+/*    public static final String DB_URL = "jdbc:mysql://192.185.41.209:3306/slmaths_id";
+    public static final String DB_USERNAME = "slmaths_isuru";
+    public static final String DB_PASSWORD = "mathcat@slomf";
+     */
+
+    public static final String MAILSERVER = "smtp.gmail.com";
+    public static final String MAILPORT = "465";
+    public static final String EMAIL_USERNAME="adminrur@rotaractmora.org";
+    public static final String EMAIL_PASSWORD = "";
+    
+    public static final String FTP_HOST="www.pixelzexplorer.org";
+    public static final String FTP_USERNAME="tharindu2013";
+    public static final String FTP_PASSWORD = "sasuke789";
+    
+}
