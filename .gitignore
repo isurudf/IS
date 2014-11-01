@@ -1,6 +1,7 @@
 target
 tomcat.8080
-tomcat.5000.classpath
+tomcat.5000
+.classpath
 .project
 .settings/
 .settings/*
