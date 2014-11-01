@@ -46,6 +46,7 @@
                     <td>BuildCoTel</td>
                     <td>CompCoTel</td>
                     <td>Fields</td>
+                    <td></td>
                 </tr>
                 <%
                     for (int i = 0; i < CompanyList.size(); i++) {
@@ -68,6 +69,7 @@
                     <td><input type="text" name="tel<%=a.getId() %>" placeholder="Co-ordinator tel" 
                                value="<%=a.getTel() %>"></input></td>
                     <td><%out.print(a.getFields()); %></td>
+                    <td><a class="button" href="addUndergradPrefs.jsp?cmp=<%out.print(a.getShortName()); %>">Add Undergrad Prefs</a></td>
                 </tr> 
                 <%
                     }

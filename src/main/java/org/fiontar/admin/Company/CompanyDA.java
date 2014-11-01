@@ -107,7 +107,7 @@ public class CompanyDA {
         try {
             Connection con = DatabaseConnectionHandler.createConnection();
             String queryCheck = "UPDATE company "
-                    + "SET name = ? , description = ? , capacity = ? , logo = ?, building = ?, tel= ?, buildTel = ? "
+                    + "SET name = ? , description = ? , capacity = ? , logo = ?, building = ?, tel= ?, buildTel = ?, undergrads = ? "
                     + "WHERE id = ? ";
 
             PreparedStatement ps = con.prepareStatement(queryCheck);
@@ -118,7 +118,8 @@ public class CompanyDA {
             ps.setString(5, company.getBuilding());
             ps.setString(6, company.getTel());
             ps.setString(7, company.getBuildTel());
-            ps.setInt(8, company.getId());
+            ps.setString(8, company.getUndergrads());
+            ps.setInt(9, company.getId());
             ps.executeUpdate();
             
             queryCheck = "UPDATE company SET buildTel = ? WHERE building = ? ";

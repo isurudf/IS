@@ -190,7 +190,7 @@ public class UndergradDA {
         return underGradList;
     }
 
-/*    public static ArrayList<Undergrad> getAllUnderGradsPreferred(String company) {
+    public static ArrayList<Undergrad> getAllUnderGradsPreferred(String company) {
         ArrayList<Undergrad> underGradList = new ArrayList<Undergrad>();
         try {
             DatabaseConnectionHandler.closeConnection();
@@ -213,7 +213,7 @@ public class UndergradDA {
             System.out.println(ex.getMessage());
         }
         return underGradList;
-    }*/
+    }
 
     public static ArrayList<Undergrad> getAllUnderGradsByField(String field) {
         ArrayList<Undergrad> underGradList = new ArrayList<Undergrad>();

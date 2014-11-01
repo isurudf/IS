@@ -50,6 +50,29 @@ public class CompanyServlet extends HttpServlet {
             return;
         }
         
+        if(request.getParameter("addstu").equals("true")){
+        	String cmp = request.getParameter("company");
+        	Company company = CompanyDA.getCompanyByName(cmp);
+        	ArrayList<Undergrad> undlist = UndergradDA.getAllUnderGrads();
+        	
+        	String undergrads = company.getUndergrads();
+        	
+        	for(int i = 0; i < undlist.size(); ++i){
+        		Undergrad a = undlist.get(i);
+        		if(request.getParameter("undergrad"+a.getId()) != null){
+        			if(undergrads == null || undergrads.equals("")){
+        				undergrads += a.getIndex();
+        			}else{
+        				undergrads += ","+a.getIndex();
+        			}
+        		}
+        	}
+        	
+        	company.setUndergrads(undergrads);
+        	CompanyDA.updateCompany(company);
+        	return;
+        }
+        
         if (request.getParameter("name") != null) {
             String fields = ",";
 

@@ -111,7 +111,11 @@ public class Company {
 	public void setShortName(String shortName) {
 		this.shortName = shortName;
 	}
-
+	
+	public void setUndergrads(String undergrads){
+		this.undergrads = undergrads;
+	}
+	
 	public String getUndergrads() {
 		return undergrads;
 	}
