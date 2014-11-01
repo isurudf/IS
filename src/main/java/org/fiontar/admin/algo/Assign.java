@@ -213,7 +213,7 @@ public class Assign {
 
     }
 
-    public static HashSet<Integer> getNumbersAssigned(String company) {
+    public static HashSet<Integer> getNmbersAssigned(String company) {
         HashSet<Integer> numbers = new HashSet<Integer>();
         for (int i = 0; i < arrCMP.length; i++) {
             if (arrCMP[i].name.equals(company)) {

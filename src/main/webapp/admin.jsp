@@ -31,17 +31,11 @@
 <div class = "dashboard">
 <h2> Admin Panel </h2><br/>
 <div class = "company">
-    <a href="adminNotification.jsp"><h4>Send Email</h4></a><br/>
-    <a href="adminSMS.jsp"><h4>Send SMS</h4></a><br/>
     <a href="adminViewUsers.jsp?field=all&company=all"><h4>View Users</h4></a><br/>
     <a href="companyStats.jsp"><h4>View Company Stats</h4></a><br/>
     <a href="companyDashboard.jsp"><h4>Add Companies</h4></a><br/>
     <a href="companyEdit.jsp"><h4>Edit Companies</h4></a><br/>
     <a href="logout.jsp"><h4>Logout</h4></a><br/>
-    <a href="adminViewQs.jsp"><h4>View Questions</h4></a><br/>
-    <a href="adminVerificationEmail.jsp"><h4>Email Verification Resend</h4></a><br/>
-    <a href="adminReset.jsp"><h4>Reset Passwords</h4></a><br/>
-    <a href="adminUgRegistration.jsp"><h4>Add Undergrads</h4></a><br/>
     <a href="adminViewUsers_1.jsp"><h4>Undergrad sheets</h4></a><br/>
     <a href="adminViewUsers_3.jsp"><h4>Company sheets</h4></a><br/>
     <a href="adminViewUsers_2.jsp"><h4>Registration sheets</h4></a><br/>
