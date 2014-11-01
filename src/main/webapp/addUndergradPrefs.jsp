@@ -48,11 +48,12 @@
 					int size = undergradList.size();
                     for (int i = 0; i < size; i++) {
                         Undergrad a= undergradList.get(i);
+                        boolean b = undergrads.contains(a.getIndex());
                         
                 %>
                 <tr>
                 	<td>
-                		<%if(undergrads.contains(a.getIndex())){%>
+                		<%if(b){%>
                 			<input type="checkbox" name="undergrad<%=a.getId() %>" checked="checked"></input>
                 		<%}else {%>
                 			<input type="checkbox" name="undergrad<%=a.getId() %>"></input>
@@ -60,6 +61,13 @@
                 	</td>
                 	<td>
                 		<%=a.getName() %>
+                	</td>
+                	<td>
+                		<%if(b){%>
+                		<input type="text" name="ugPref<%=a.getId() %>" value="<%=undergrads.indexOf(a.getIndex())/8 + 1 %>" />
+                		<%}else {%>
+                		<input type="text" name="ugPref<%=a.getId() %>" />
+                		<%}%>
                 	</td>
                 </tr>
                 <%

@@ -4,11 +4,14 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Collections;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import org.fiontar.api.Mail.sendMail;
 import org.fiontar.registration.Undergrad;
 import org.fiontar.registration.dao.UndergradDA;
@@ -54,22 +57,26 @@ public class CompanyServlet extends HttpServlet {
         	String cmp = request.getParameter("company");
         	Company company = CompanyDA.getCompanyByName(cmp);
         	ArrayList<Undergrad> undlist = UndergradDA.getAllUnderGrads();
+        	ArrayList<UGPref> prefList = new ArrayList<UGPref>();
         	
-        	String undergrads = company.getUndergrads();
+        	String undergrads = null;
         	
         	for(int i = 0; i < undlist.size(); ++i){
         		Undergrad a = undlist.get(i);
         		if(request.getParameter("undergrad"+a.getId()) != null){
-        			if(undergrads == null || undergrads.equals("")){
-        				undergrads += a.getIndex();
-        			}else{
-        				undergrads += ","+a.getIndex();
-        			}
+        			prefList.add(new UGPref(a.getIndex(), Integer.parseInt(request.getParameter("ugPref"+a.getId()))));
         		}
+        	}
+        	Collections.sort(prefList);
+        	undergrads = prefList.get(0).index;
+        			
+        	for(int i = 1; i < prefList.size(); ++i){
+        		undergrads += ","+prefList.get(i).index;
         	}
         	
         	company.setUndergrads(undergrads);
         	CompanyDA.updateCompany(company);
+        	response.setHeader("Refresh", "0; URL=companyEdit.jsp");
         	return;
         }
         
@@ -210,4 +217,26 @@ public class CompanyServlet extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+}
+
+class UGPref implements Comparable<UGPref>{
+	public String index;
+	public int preference;
+	
+	
+	public UGPref(String index, int preference) {
+	    super();
+	    this.index = index;
+	    this.preference = preference;
+    }
+
+	public int compareTo(UGPref o) {
+		if(this.preference > o.preference)
+			return 1;
+		else if(this.preference < o.preference)
+			return -1;
+		
+		return 0;
+    }
+	
 }
