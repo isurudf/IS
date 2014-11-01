@@ -36,8 +36,8 @@ public class UndergradDA {
 
         Connection con = DatabaseConnectionHandler.createConnection();
         String queryCheck = "INSERT INTO undergrad ("
-                + "indexNum, email,name,password,addr,phone,resume,verification,verified,companies,field,passwordReset,emailLink"
-                + ") VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
+                + "indexNum, email,name,password,addr,phone,resume,verification,verified,companies,field,passwordReset,emailLink,gpa"
+                + ") VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         PreparedStatement ps = con.prepareStatement(queryCheck);
         ps.setString(1, undergrad.getIndex());
         ps.setString(2, undergrad.getEmail());
@@ -52,6 +52,7 @@ public class UndergradDA {
         ps.setString(11, undergrad.getField());
         ps.setString(12, " ");
         ps.setString(13, undergrad.getEmailLink());
+        ps.setFloat(14, undergrad.getGpa());
         ps.executeUpdate();
         con.close();
         sendVerification(undergrad);
@@ -93,7 +94,8 @@ public class UndergradDA {
                     rs.getString("companies"),
                     rs.getString("field"),
                     rs.getString("passwordReset"),
-                    rs.getString("emailLink"));
+                    rs.getString("emailLink"),
+        			rs.getFloat("gpa"));
     }
     public static Undergrad getUndergrad(String indexNum) {
         Undergrad s = null;

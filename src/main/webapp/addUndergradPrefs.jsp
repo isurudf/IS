@@ -1,3 +1,4 @@
+<%@page import="java.util.Collections"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="org.fiontar.admin.Company.Company"%>
 <%@page import="java.util.ArrayList"%>
@@ -28,6 +29,7 @@
     else{
     	String cmp = request.getParameter("cmp");
         ArrayList<Undergrad> undergradList= UndergradDA.getAllUnderGrads();
+        Collections.sort(undergradList);
         Company company = CompanyDA.getCompanyByName(cmp);
                 
 %>

@@ -2,167 +2,183 @@
  * This Undergrad class object used to get the data of a undergrad
  */
 package org.fiontar.registration;
+
 import java.io.Serializable;
 
-public class Undergrad extends User implements Serializable{
-    private String index;
-    private String email;
-    private String name;
-    private String password;
-    private String addr;
-    private String phone;
-    private String resume;
-    private int id;
-    private String verification;
-    private int verified;
-    private String companies;
-    private String field;
-    private String passwordReset;
-    private String emailLink;
-    
-    public Undergrad(String index, String email, String name, String password, String addr, String phone, String resume, int id, String verification, int verified, String companies, String field, String passwordReset, String emailLink) {
-        
-        super("undergradDashboard.jsp", name, index);
-        this.index=index;
-        this.email = email;
-        this.name = name;
-        this.password = password;
-        this.addr = addr;
-        this.phone = phone;
-        this.resume = resume;
-        this.id = id;
-        this.verification = verification;
-        this.verified = verified;
-        this.companies = companies;
-        this.field=field;
-        this.passwordReset=passwordReset;
-        this.emailLink=emailLink;
-    }
-    
-    
-    public String getAddr() {
-        
-        return addr;
-    }
+public class Undergrad extends User implements Serializable, Comparable<Undergrad> {
 
-    public String getCompanies() {
-        return companies;
-    }
+    private static final long serialVersionUID = 1L;
+	private String index;
+	private String email;
+	private String name;
+	private String password;
+	private String addr;
+	private String phone;
+	private String resume;
+	private int id;
+	private String verification;
+	private int verified;
+	private float gpa;
+	private String companies;
+	private String field;
+	private String passwordReset;
+	private String emailLink;
 
-    public String getField() {
-        return field;
-    }
+	public Undergrad(String index, String email, String name, String password, String addr,
+	                 String phone, String resume, int id, String verification, int verified,
+	                 String companies, String field, String passwordReset, String emailLink, float gpa) {
 
-    public String getIndex() {
-        return index;
-    }
+		super("undergradDashboard.jsp", name, index);
+		this.index = index;
+		this.email = email;
+		this.name = name;
+		this.password = password;
+		this.addr = addr;
+		this.phone = phone;
+		this.resume = resume;
+		this.id = id;
+		this.verification = verification;
+		this.verified = verified;
+		this.companies = companies;
+		this.field = field;
+		this.passwordReset = passwordReset;
+		this.emailLink = emailLink;
+		this.gpa = gpa;
+	}
 
-    public String getEmailLink() {
-        return emailLink;
-    }
+	public String getAddr() {
 
-    public void setEmailLink(String emailLink) {
-        this.emailLink = emailLink;
-    }
-    
-    
+		return addr;
+	}
 
-    public void setField(String field) {
-        this.field = field;
-    }
+	public String getCompanies() {
+		return companies;
+	}
 
-    public void setIndex(String index) {
-        this.index = index;
-    }
-    
-    public String getEmail() {
-        return email;
-    }
+	public String getField() {
+		return field;
+	}
 
-    public int getId() {
-        return id;
-    }
+	public String getIndex() {
+		return index;
+	}
 
-    @Override
-    public String getLink() {
-        return super.getLink(); //To change body of generated methods, choose Tools | Templates.
-    }
+	public String getEmailLink() {
+		return emailLink;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public void setEmailLink(String emailLink) {
+		this.emailLink = emailLink;
+	}
 
-    public String getPassword() {
-        return password;
-    }
+	public void setField(String field) {
+		this.field = field;
+	}
 
-    public String getPhone() {
-        return phone;
-    }
+	public void setIndex(String index) {
+		this.index = index;
+	}
 
-    public String getResume() {
-        return resume;
-    }
+	public String getEmail() {
+		return email;
+	}
 
-    public String getVerification() {
-        return verification;
-    }
+	public int getId() {
+		return id;
+	}
 
-    public int getVerified() {
-        return verified;
-    }
+	@Override
+	public String getLink() {
+		return super.getLink(); // To change body of generated methods, choose
+								// Tools | Templates.
+	}
 
-    public String getPasswordReset() {
-        return passwordReset;
-    }
+	public String getName() {
+		return name;
+	}
 
-    public void setPasswordReset(String passwordReset) {
-        this.passwordReset = passwordReset;
-    }
-    
+	public String getPassword() {
+		return password;
+	}
 
-    public void setAddr(String addr) {
-        this.addr = addr;
-    }
+	public String getPhone() {
+		return phone;
+	}
 
-    public void setCompanies(String companies) {
-        this.companies = companies;
-    }
+	public String getResume() {
+		return resume;
+	}
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+	public String getVerification() {
+		return verification;
+	}
 
-    public void setId(int id) {
-        this.id = id;
-    }
+	public int getVerified() {
+		return verified;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public String getPasswordReset() {
+		return passwordReset;
+	}
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+	public void setPasswordReset(String passwordReset) {
+		this.passwordReset = passwordReset;
+	}
 
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
+	public void setAddr(String addr) {
+		this.addr = addr;
+	}
 
-    public void setResume(String resume) {
-        this.resume = resume;
-    }
+	public void setCompanies(String companies) {
+		this.companies = companies;
+	}
 
-    public void setVerification(String verification) {
-        this.verification = verification;
-    }
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-    public void setVerified(int verified) {
-        this.verified = verified;
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public void setResume(String resume) {
+		this.resume = resume;
+	}
+
+	public void setVerification(String verification) {
+		this.verification = verification;
+	}
+
+	public void setVerified(int verified) {
+		this.verified = verified;
+	}
+
+	public float getGpa() {
+		return gpa;
+	}
+
+	public void setGpa(float gpa) {
+		this.gpa = gpa;
+	}
+
+	public int compareTo(Undergrad o) {
+		if(this.getGpa() > o.getGpa())
+			return -1;
+		else if(this.getGpa() < o.getGpa())
+			return 1;
+		else
+			return 0;
     }
-    
-    
-    
-    
-    
 }

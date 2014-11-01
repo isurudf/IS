@@ -50,7 +50,12 @@
         return true;
     }
 
-
+    function isFloatKey(evt) {
+        var charCode = (evt.which) ? evt.which : event.keyCode
+        if (charCode > 31 && (charCode < 46 || charCode > 57 || charCode == 47))
+            return false;
+        return true;
+    }
 
 
 
@@ -116,6 +121,10 @@
                 <div  class="wrapper">
                     <span>Mobile Number:</span>
                     <div class="bg"><input type="text" class="input" name="phone" required="true" onkeypress="return isNumberKey(event)"></div>								
+                </div><br></br>
+                <div  class="wrapper">
+                    <span>GPA:</span>
+                    <div class="bg"><input type="text" class="input" name="gpa" required="true" onkeypress="return isFloatKey(event)"></div>								
                 </div><br></br>
 				<div class="styled-select">
                     <span>Department:</span>

@@ -93,7 +93,8 @@ public class UndergradRegistrationServlet extends HttpServlet {
                 " ",
                 request.getParameter("field"),
                 " ",
-                UniqueID.generate());
+                UniqueID.generate(),
+                Float.parseFloat(request.getParameter("gpa")));
         try {
             UndergradDA.addUndergrad(s);
             System.out.println("Undergrad registered " + s.getEmail());
