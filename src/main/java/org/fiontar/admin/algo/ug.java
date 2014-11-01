@@ -6,7 +6,7 @@ import org.fiontar.registration.Undergrad;
  *
  * @author Isuru Fernando
  */
-public class ug {
+class ug {
 
     public Undergrad u;
     public int field;
