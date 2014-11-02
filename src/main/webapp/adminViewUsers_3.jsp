@@ -1,11 +1,11 @@
-<%@page import="org.fiontar.admin.algo.Assign"%>
+<%@page import="org.fiontar.admin.allocate.Assign"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="org.fiontar.admin.Company.Company"%>
 <%@page import="org.fiontar.admin.Company.CompanyDA"%>
 <%@page import="org.fiontar.registration.Undergrad"%>
 <%@page import="org.fiontar.registration.dao.UndergradDA"%>
-<%@page import="org.fiontar.admin.algo.ug"%>
-<%@page import="org.fiontar.admin.algo.cmp"%>
+<%@page import="org.fiontar.admin.allocate.UG"%>
+<%@page import="org.fiontar.admin.allocate.CMP"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -31,29 +31,24 @@
         response.setHeader("Refresh", "0; URL=login.jsp?id=You are not logged in!");
     } 
     else{
-        String[] fields = {"ARCH", "CPE", "CE", "CSE", "ERM", "EE", "ENTC", "FM", "IT", "FD", "ME", "MECH", "QS", "TC", "TCP", "TLM"};
         
-        String[] fieldsReal={"ARCH", "CPE", "CE", "CSE", "EM", "EE", "ENTC", "FM", "IT", "FD", "MT", "ME", "QS", "TM", "TCP", "TLM"};
-        
-        Assign.assign();
-        cmp[] arr = Assign.arrCMP;
-        ArrayList<ug> list;
+        Assign.initialise();
+        ArrayList<UG> list;
   
 %>
 <br/>
 <% 
         
-        for(int i=0;i<arr.length;i++){
-            list = arr[i].list;
+        for(CMP cmp: Assign.arrCMP){
+            list = cmp.arrUG;
 %>
 
 <div style="page-break-after:always; margin-left:40px;">
-    <h2><%=arr[i].getName()%></h2>
+    <h2><%=cmp.name%></h2>
     <table>
         
         <tr style="height: 40px">
-            <td width="10px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-            <td width="100px" style="text-align: center">FIELD</td>
+            <td width="10px">TimeSlot</td>
             <td width="600px">NAME</td>
             <td width="150px">PHONE NUMBER</td>
             
@@ -68,8 +63,7 @@
     
         <tr>
             
-            <td style="text-align: center"><%=(j+1)+"&nbsp;&nbsp;"%></td>
-            <td style="text-align: center"><%=fieldsReal[list.get(j).field]%></td>
+            <td style="text-align: center"><%=j+"&nbsp;&nbsp;"%></td>
             <td><%
             String a = list.get(j).getName().toUpperCase();
             if(a.length()<35)

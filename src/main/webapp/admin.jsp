@@ -1,5 +1,5 @@
 <%@page import="org.fiontar.registration.User"%>
-
+<%@page import="org.fiontar.admin.allocate.Assign"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -25,6 +25,7 @@
         response.setHeader("Refresh", "0; URL=login.jsp?id=You are not logged in!");
     } 
     else{
+        Assign.initialise();
 %>
 <%@ include file="up.jsp" %>
 
@@ -38,7 +39,6 @@
     <a href="logout.jsp"><h4>Logout</h4></a><br/>
     <a href="adminViewUsers_1.jsp"><h4>Undergrad sheets</h4></a><br/>
     <a href="adminViewUsers_3.jsp"><h4>Company sheets</h4></a><br/>
-    <a href="adminViewUsers_2.jsp"><h4>Registration sheets</h4></a><br/>
 </div>
 <%@ include file="down.jsp" %>
 <%} %>

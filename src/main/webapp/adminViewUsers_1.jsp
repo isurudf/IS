@@ -1,11 +1,11 @@
-<%@page import="org.fiontar.admin.algo.Assign"%>
+<%@page import="org.fiontar.admin.allocate.Assign"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="org.fiontar.admin.Company.Company"%>
 <%@page import="org.fiontar.admin.Company.CompanyDA"%>
 <%@page import="org.fiontar.registration.Undergrad"%>
 <%@page import="org.fiontar.registration.dao.UndergradDA"%>
-<%@page import="org.fiontar.admin.algo.ug"%>
-<%@page import="org.fiontar.admin.algo.cmp"%>
+<%@page import="org.fiontar.admin.allocate.UG"%>
+<%@page import="org.fiontar.admin.allocate.CMP"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -31,20 +31,24 @@
         response.setHeader("Refresh", "0; URL=login.jsp?id=You are not logged in!");
     } 
     else{
-        String[] fields = {"ARCH", "CPE", "CE", "CSE", "ERM", "EE", "ENTC", "FM", "IT", "FD", "ME", "MECH", "QS", "TC", "TCP", "TLM"};
-        
-        String[] fieldsReal={"ARCH", "CPE", "CE", "CSE", "EM", "EE", "ENTC", "FM", "IT", "FD", "MT", "ME", "QS", "TM", "TCP", "TLM"};
-        
-        Assign.assign();
-        ug[] arr = Assign.arrUG;
-        for(int i=0;i<arr.length;i++){
+        Assign.initialise();
+        for(UG ug:Assign.arrUG){
 %>
-        <% if(i%2==0){ %>
-        <div style="" >
-        <% }else{ %>
+
         <div>
 
-        <%}%>
+        <% 
+            out.println(ug.getName()+"<br/>");
+            out.println(ug.u.getIndex()+"<br/>");
+            for(int i=0;i<3;i++){
+                if(ug.assigned[i]!=null){
+                    String timeslot = "" +(100+ug.assigned[i].arrUG.indexOf(ug));
+                    out.println("TimeSlot: "+timeslot.substring(1)+"  Company : ");
+                    out.println(ug.assigned[i].name+"<br/>");
+                }
+            }
+            out.println("<br/><br/>");
+        %>
     
 </div>
 

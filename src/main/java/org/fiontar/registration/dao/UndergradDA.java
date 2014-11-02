@@ -20,11 +20,6 @@ import org.fiontar.registration.Undergrad;
  */
 public class UndergradDA {
 
-    /**
-     * method allows to add schools to the database
-     *
-     * @param undergrad school
-     */
     public static ArrayList<Undergrad> list;
     public static ArrayList<Undergrad> getUndergradList(){
         if(list==null)

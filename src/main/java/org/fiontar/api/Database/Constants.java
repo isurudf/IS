@@ -15,7 +15,7 @@ public class Constants {
     
     public static final String DB_URL = "jdbc:mysql://localhost/is";
     public static final String DB_USERNAME = "root";
-    public static final String DB_PASSWORD = "123";
+    public static final String DB_PASSWORD = "";
     
 /*    public static final String DB_URL = "jdbc:mysql://192.185.41.209:3306/slmaths_id";
     public static final String DB_USERNAME = "slmaths_isuru";

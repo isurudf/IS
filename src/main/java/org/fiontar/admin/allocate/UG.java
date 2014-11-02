@@ -9,13 +9,13 @@ import org.fiontar.registration.Undergrad;
  *
  * @author Isuru Fernando
  */
-class UG {
+public class UG {
 
     public Undergrad u;
     public CMP[] assigned = new CMP[3];
-    private ArrayList<CMP> prefComps = new ArrayList<CMP>();
-    private Queue<CMP> proposed;
-    public CMP[] interviews = new CMP[3];
+    public ArrayList<CMP> prefComps = new ArrayList<CMP>();
+    public Queue<CMP> proposed;
+    public CMP[] slots = new CMP[20];
 
     public UG(Undergrad u) {
         this.u = u;

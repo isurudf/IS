@@ -6,13 +6,14 @@ import org.fiontar.registration.Undergrad;
  *
  * @author Isuru Fernando
  */
-class ug {
+public class ug {
 
     public Undergrad u;
     public int field;
     public cmp[] assigned = new cmp[3];
     private ArrayList<cmp> list = new ArrayList<cmp>();
     boolean[] how = new boolean[3];
+    
 
     public ug(Undergrad u) {
         this.u = u;

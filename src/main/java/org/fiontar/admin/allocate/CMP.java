@@ -8,17 +8,18 @@ public class CMP {
 
     public Company c;
     int capacity;
-    String fields;
     public String name;
     double rating = 0;
     public ArrayList<UG> prefUndergrads = new ArrayList<UG>();
-    public UG[] arrUG;
+    public ArrayList<UG> arrUG;
+    public UG[] slots = new UG[20];
 
     public CMP(Company c) {
         this.c = c;
         name = c.getShortName();
         capacity = c.getCapacity();
-        arrUG = new UG[capacity];
+        capacity = 20;
+        arrUG = new ArrayList<UG>();
     }
 
     public void populateFields() {
@@ -35,23 +36,24 @@ public class CMP {
     }
 
     public boolean reply(UG proposer) {
-        for (int i = 0; i < arrUG.length; i++) {
-            if (arrUG[i] == null) {
-                arrUG[i] = proposer;
-                return true;
-            }
+       
+        if(arrUG.size() < 20) {
+            arrUG.add(proposer);
+            return true;
         }
-        for (int i = 0; i < arrUG.length; i++) {
-            if (rank(arrUG[i]) > rank(proposer)) {
-                arrUG[i].remove(this);
-                arrUG[i] = proposer;
+        
+        for (int i = 0; i < arrUG.size(); i++) {
+            if (getRank(arrUG.get(i)) > getRank(proposer)) {
+                arrUG.get(i).remove(this);
+                arrUG.set(i, proposer);
+                System.out.println("Matched "+this.name+" and "+proposer.getName());
                 return true;
             }
         }
         return false;
     }
 
-    private int rank(UG ug) {
+    private int getRank(UG ug) {
         return prefUndergrads.indexOf(ug);
     }
 
