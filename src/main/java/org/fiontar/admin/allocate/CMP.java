@@ -46,7 +46,7 @@ public class CMP {
             if (getRank(arrUG.get(i)) > getRank(proposer)) {
                 arrUG.get(i).remove(this);
                 arrUG.set(i, proposer);
-                System.out.println("Matched "+this.name+" and "+proposer.getName());
+                //System.out.println("Matched "+this.name+" and "+proposer.getName());
                 return true;
             }
         }

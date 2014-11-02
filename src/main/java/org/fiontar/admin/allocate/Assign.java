@@ -68,11 +68,12 @@ public class Assign {
         int iter = 0;
         while (!matchingFinished()) {
             iter++;
-            System.out.println("Iteration in stable matching : "+iter);
             for (UG ug : arrUG) {
                 ug.propose();   //While matching is not finished, the UGs propose to CMPs
             }
         }
+        
+        System.out.println("Number of iterations in matching : "+iter);
         
         for (CMP cmp : arrCMP) {
             Collections.shuffle(cmp.arrUG);
@@ -85,7 +86,6 @@ public class Assign {
         iter = 0;
         while(attacksReduced && attacks > 0) {
             iter++;
-            System.out.println("Iteration in scheduling : "+iter);
             attacksReduced = false;
             attacks = 0;
             for (UG ug : arrUG) {
@@ -93,7 +93,7 @@ public class Assign {
                     cmp1 = ug.assigned[i];
                     for (int j = i + 1; j < 3 && cmp1 != null; j++) {
                         cmp2 = ug.assigned[j];
-                        System.out.println("Checking "+ug.u.getIndex()+" for "+cmp1.name+" and "+cmp2.name);
+                        //System.out.println("Checking "+ug.u.getIndex()+" for "+cmp1.name+" and "+cmp2.name);
                         if (cmp2 != null && cmp2.arrUG.indexOf(ug) == cmp1.arrUG.indexOf(ug)) {
                             totalAttacks++;
                             ret = swap(ug, cmp1);
@@ -110,8 +110,9 @@ public class Assign {
                 }
             }
         }
-        System.out.println("Attacks left : " + attacks);
-        System.out.println("Total attacks : " + totalAttacks);
+        System.out.println("Number of iterations in scheduling : "+iter);
+        //System.out.println("Attacks left : " + attacks);
+        System.out.println("Total attacks resolved in the last iteration : " + totalAttacks);
         while(attacksReduced && attacks > 0) {
             attacksReduced = false;
             attacks = 0;
@@ -134,14 +135,6 @@ public class Assign {
                     }
                 }
             }
-        }
-        
-        for(CMP cmp:arrCMP){
-            System.out.println(cmp.name);
-            for (UG ug:cmp.arrUG){
-                System.out.print(ug.u.getIndex()+" ");
-            }
-            System.out.println();
         }
     }
     private static boolean addToFreeTimeSlot(UG s, CMP cmp) {
