@@ -20,7 +20,6 @@
                     <div class="eight columns alpha">
 
                         <div class="copyright">
-                            Copyright &copy; 2013. Rotaract Club of University of Moratuwa. All rights reserved
                         </div><!--/ .copyright-->
 
                         

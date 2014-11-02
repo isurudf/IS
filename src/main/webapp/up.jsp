@@ -26,7 +26,7 @@
             <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
             <!--[if ie]><meta http-equiv='X-UA-Compatible' content="IE=edge,IE=9,IE=8,chrome=1" /><![endif]-->
 
-            <title>Are You Ready? 2013</title>
+            <title>Mora Intelligent Labs</title>
 
             <meta name="description" content="">
                 <meta name="author" content="Rotaract Club of University of Moratuwa">
@@ -90,7 +90,7 @@
                                                         %>
                                                         <ul>
                                                             <li>
-                                                                <a href = "index.jsp" >Log In</a>
+                                                                <a href = "logout.jsp" >Log Out</a>
                                                             </li>
                                                    <!--        <li>
                                                                 <a href = "undergradRegistration.jsp" >Register</a>

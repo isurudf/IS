@@ -38,17 +38,20 @@
 %>
 <br/>
 <% 
-        
+  String[] timeslots = {"8.00-8.30am","8.30-9.00am","9.00-9.30am","9.30-10.00am","10.00-10.30am","10.30-11.00am","11.00-11.30am",
+    "11.30am-12.00pm","12.00-12.30pm","12.30-1.00pm","1.00-1.30pm","1.30-2.00pm","2.00-2.30pm","2.30-3.00pm","3.00-3.30pm",
+    "3.30-4.00pm","4.00-4.30pm","4.30-5.00pm","5.00-5.30pm","5.30-6.00p"
+            + "m"};      
         for(CMP cmp: Assign.arrCMP){
             list = cmp.arrUG;
 %>
 
 <div style="page-break-after:always; margin-left:40px;">
-    <h2><%=cmp.name%></h2>
+    <h2><%=cmp.c.getName()%></h2>
     <table>
         
         <tr style="height: 40px">
-            <td width="10px">TimeSlot</td>
+            <td width="10px">TimeSlot&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
             <td width="600px">NAME</td>
             <td width="150px">PHONE NUMBER</td>
             
@@ -63,7 +66,7 @@
     
         <tr>
             
-            <td style="text-align: center"><%=j+"&nbsp;&nbsp;"%></td>
+            <td style="text-align: center"><%=timeslots[j]%></td>
             <td><%
             String a = list.get(j).getName().toUpperCase();
             if(a.length()<35)

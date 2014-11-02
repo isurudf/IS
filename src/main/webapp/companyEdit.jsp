@@ -38,6 +38,8 @@
                 <tr>
                     <td>Edit&nbsp;</td>
                     <td>ShortName</td>
+                    <td>Fields</td>
+                    <td></td>
                     <td>Name</td>
                     <td>Description</td>
                     <td>Logo</td>
@@ -45,7 +47,6 @@
                     <td>BuildingName</td>
                     <td>BuildCoTel</td>
                     <td>CompCoTel</td>
-                    <td>Fields</td>
                     <td></td>
                 </tr>
                 <%
@@ -55,6 +56,9 @@
                 <tr>
                     <td><input type="checkbox" name="edit<%=a.getId() %>" ></input></td>
                     <td><%out.print(a.getShortName()); %></td>
+                    <td><input type="text" placeholder="Fields" 
+                               value="<%out.print(a.getFields()); %>"></input></td>
+                    <td><a href="addUndergradPrefs.jsp?cmp=<%out.print(a.getShortName()); %>" target="new">Add Undergraduate Preferences</a></td>  
                     <td><input type="text" name="name<%=a.getId() %>" placeholder="company name" value="<%=a.getName() %>"></input></td>
                     <td><textarea name="description<%=a.getId() %>" rows =1 cols =40 style="resize:vertical" 
                                   placeholder="brief description of the company"><%=a.getDescription() %></textarea></td>
@@ -68,23 +72,21 @@
                                value="<%=a.getBuildTel() %>"></input></td>
                     <td><input type="text" name="tel<%=a.getId() %>" placeholder="Co-ordinator tel" 
                                value="<%=a.getTel() %>"></input></td>
-                    <td><%out.print(a.getFields()); %></td>
-                    <td><a class="button" href="addUndergradPrefs.jsp?cmp=<%out.print(a.getShortName()); %>">Add Undergrad Prefs</a></td>
                 </tr> 
                 <%
                     }
                 %>
 
             </table>
-           
-                    <p align="right"> <input type="submit" value="Submit" class="button"/></p>
-                    </form>
+
+            <p align="right"> <input type="submit" value="Submit" class="button"/></p>
+        </form>
 
 
 
-                    </div><!-- end of right content-->
-                    </div>
-                    <br><br>
+    </div><!-- end of right content-->
+</div>
+<br><br>
 
-                            <% }%>
-                            <%@ include file="down.jsp" %>
+        <% }%>
+        <%@ include file="down.jsp" %>
