@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4.1
+-- version 4.1.6
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 02, 2014 at 06:30 AM
--- Server version: 5.5.32
--- PHP Version: 5.4.19
+-- Generation Time: Nov 02, 2014 at 04:03 PM
+-- Server version: 5.6.16
+-- PHP Version: 5.5.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,8 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `is`
 --
-CREATE DATABASE IF NOT EXISTS `is` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `is`;
 
 -- --------------------------------------------------------
 
@@ -1689,7 +1687,7 @@ CREATE TABLE IF NOT EXISTS `undergrad` (
 --
 
 INSERT INTO `undergrad` (`indexNum`, `name`, `email`, `password`, `addr`, `phone`, `resume`, `id`, `emailLink`, `gpa`, `verified`, `companies`, `field`, `passwordReset`, `regTime`, `verification`, `assigned0`, `assigned1`, `assigned2`) VALUES
-('090505J', 'Prasanna Srinath Subhasinghe', 'spsnath@gmail.com', '9a86e3474cf905ff37e3ac123cd79a', 'Medagamgoda, Meethanwala, Mawathagama', '0777615332', 'CE/090505J.pdf', 50, '9993130a14e4430cbac1abc59442cf57', 2.7, 1, 'ICC,cecb,sdcc,Maga,masActive,sanken,srilankan,aitkenspence,etisalat,isuruengineering,fonterra,CEC,NERD,DIMO,kent,rocell,CTC,lankasugar,vidullanka,glide,Warna,holcim,ncd,MIT,', 'CE', ' ', '2013-11-20 05:58:15', '9464e0c4e255414fadae9b4688d1f77e', 'ICC', 'sdcc', 'sanken'),
+('080000A', 'Prasanna Srinath Subhasinghe', 'spsnath@gmail.com', '202cb962ac5975b964b7152d234b70', 'Medagamgoda, Meethanwala, Mawathagama', '0777615332', 'CE/090505J.pdf', 50, '9993130a14e4430cbac1abc59442cf57', 2.7, 1, 'ICC,cecb,sdcc,Maga,masActive,sanken,srilankan,aitkenspence,etisalat,isuruengineering,fonterra,CEC,NERD,DIMO,kent,rocell,CTC,lankasugar,vidullanka,glide,Warna,holcim,ncd,MIT,', 'CE', ' ', '2013-11-20 05:58:15', '9464e0c4e255414fadae9b4688d1f77e', 'ICC', 'sdcc', 'sanken'),
 ('090412V', 'Ratnarajah Rajeevan', 'prrajeevan89@gmail.com', 'e31d6681ab7a5fb9c9e0e2dac15a301d', 'Kaddaiveli lane, karaveddy east karaveddy', '0775965061', 'CE/090412V.pdf', 62, '2217914538224043ae07451984ffe773', 0, 1, 'Maga,ICC,cecb,CEC,sdcc,sanken,ncd,holcim,glide,kent,', 'CE', ' ', '2013-11-20 05:58:59', '2c9be9a6c8f94a23add47f7d59f99f77', 'Maga', 'ICC', 'sdcc'),
 ('090186E', 'chamod', 'c4chamod@gmail.com', 'd6a6bcdb1694a2d9e3a69648f3a3', 'jaya pedesa, bopaththa, Urapola', '0716534780', 'CE/090186E.pdf', 73, 'cc2e969743c74a68ba56f0e1c83e882f', 0, 1, 'cecb,ncd,sdcc,CEC,ICC,Maga,sanken,CTC,srilankan,rocell,vidullanka,MIT,kent,lankasugar,etisalat,fonterra,holcim,glide,masActive,', 'CE', ' ', '2013-11-20 05:59:41', 'b524ad9c316b498ca560208794ebade8', 'cecb', 'ncd', 'sdcc'),
 ('090439J', 'ROKILAN MAKENTHIRARAJA', 'rokilan90@gmail.com', '89a51adf82b50177f191e652b726345', 'CHEDDIYAKURICHCHI,\r\nPOONAKARY,\r\nKILINOCHCI.', '0777594273', 'CE/090439J.pdf', 80, '3a1e66123ae44337b9ab74561a07b3c7', 0, 1, 'ICC,Maga,cecb,sanken,ncd,CEC,kent,holcim,', 'CE', ' ', '2013-11-20 06:00:19', '77e1154f982a43d5a44e9b79142391c6', 'ICC', 'sanken', 'kent'),
