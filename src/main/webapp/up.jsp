@@ -71,50 +71,8 @@
                                             <div class="menu">
 
                                                 <ul>
-                                                    <li><a href="index.jsp">Home</a></li>
-                                                    <li><a href="">Sessions</a>
-                                                        <ul>
-                                                            <li><a href="cvclinic.jsp">CV Clinic</a></li>
-                                                            <li><a href="eforum.jsp">Engineers' Forum</a></li>
-                                                            <li><a href="criterion.jsp">The Criterion</a></li>
-                                                            <li><a href="youtm.jsp">You&trade;</a></li>
-                                                            <li><a href="flagship.jsp">Flagship Day</a></li>
-                                                            <li><a href="deng.jsp">Dining Etiquette and Grooming</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="">Gallery</a>                        
-                                                        <ul>
-
-                                                            <li><a href="">Are You Ready? 2012</a><ul>  	
-                                                                    <li><a href="albumeforum.jsp">Engineers' Forum</a></li>
-                                                                    <li><a href="albumbenchmark.jsp">Benchmark</a></li>
-                                                                    <li><a href="albumbeknown.jsp">Be Known</a></li>
-                                                                    <li><a href="albumflag.jsp">Flagship Day</a></li>
-                                                                    <li><a href="albumdeng.jsp">Dining Etiquettes and Grooming</a></li></ul></li>
-                                                            <li><a href="">Are You Ready? 2013</a><ul>  
-                                                                    <li><a href="albumcv.jsp">CV Clinic</a></li></ul>
-
-                                                            </li>
-
-
-                                                        </ul>
-                                                    </li> <li><a href="">About Us</a>
-                                                        <ul>
-                                                            <li><a href="">Partners</a>
-                                                                <ul>
-                                                                    <li><a href="http://www.dimolanka.com/">DIMO</a></li>
-                                                                    <li><a href="http://www.brandix.com/">Brandix</a></li>
-                                                                    <li><a href="http://www.mobitel.lk">Mobitel</a></li>
-                                                                </ul>
-                                                            </li>
-                                                            <li><a href="rotaract.jsp">Rotaract Mora </a></li>
-                                                            <li><a href="organizers.jsp">Organizers</a></li>
-                                                            <li><a href="contact.jsp">Contact Us</a></li>
-
-                                                        </ul>
-                                                    </li>
-
-                                                    <li><a href="companies.jsp">Companies</a></li>
+                                                    <!--<li><a href="index.jsp">Home</a></li>-->
+                                                   
                                                     <li><a href="">My Profile</a>
                                                         <% if (val != null&&val.length()>38) {
                                                         %>
@@ -132,7 +90,7 @@
                                                         %>
                                                         <ul>
                                                             <li>
-                                                                <a href = "login.jsp" >Log In</a>
+                                                                <a href = "index.jsp" >Log In</a>
                                                             </li>
                                                    <!--        <li>
                                                                 <a href = "undergradRegistration.jsp" >Register</a>

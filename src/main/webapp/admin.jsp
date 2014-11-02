@@ -30,7 +30,7 @@
 <%@ include file="up.jsp" %>
 
 <div class = "dashboard">
-<h2> Admin Panel </h2><br/>
+<h2></h2><br/>
 <div class = "company">
     <a href="adminViewUsers.jsp?field=all&company=all"><h4>View Users</h4></a><br/>
     <a href="companyStats.jsp"><h4>View Company Stats</h4></a><br/>

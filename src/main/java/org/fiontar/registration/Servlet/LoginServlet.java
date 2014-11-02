@@ -62,18 +62,16 @@ public class LoginServlet extends HttpServlet {
             response.setHeader("Refresh","0; URL=login.jsp?id=Invalid password.");
             return;
         }
-        response.sendRedirect("message.jsp?message=Company preference selection has been closed now. <br> "
-            +"Please bring copies of your CV for the interviewers. <br> Good Luck with the interviews!!");
-        return;
-      /*
+
+      
         try {
             Connection con = DatabaseConnectionHandler.createConnection();
             /**
              * E-mail/password validation query
              */
             
-    /*        String queryCheck = "SELECT * from undergrad WHERE password = ? AND indexNum = ? ";
-            
+          String queryCheck = "SELECT * from undergrad WHERE password = ? AND indexNum = ? ";
+            System.out.println(password);
             PreparedStatement ps = con.prepareStatement(queryCheck);
             ps.setString(1, password);
             ps.setString(2, indexNum);
@@ -82,7 +80,7 @@ public class LoginServlet extends HttpServlet {
             /**
              * Redirection
              */
-      /*      if (rs.next()) 
+            if (rs.next()) 
             {    
                 System.out.println("Undergrad log in "+indexNum+" "+password+ " success");
                 Cookie cookie = new Cookie ("user",rs.getString("verification")+rs.getString("indexNum"));
@@ -102,7 +100,7 @@ public class LoginServlet extends HttpServlet {
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
             response.setHeader("Refresh","0; URL=login.jsp?id=Oops, something went wrong. Please try again!");
-        }*/
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
