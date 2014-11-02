@@ -30,7 +30,6 @@
 
             <meta name="description" content="">
                 <meta name="author" content="Rotaract Club of University of Moratuwa">
-                    <link rel="shortcut" href="images/favicon.html" />
 
                     <!-- Mobile Specific Metas
               ================================================== -->
