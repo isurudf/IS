@@ -178,7 +178,6 @@
                     out.println("<td>"+ug.assigned[i].c.getName()+"</td>");
                 }
             }
-            out.println("<br/><br/>");
         %>
 </tr>
            
