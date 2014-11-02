@@ -60,8 +60,7 @@
 
 
 <div class="dashboard">
-    <h3>Registration has been closed. :(</h3>
-<!--
+
     <h2>Registration Form</h2>
 
     <div class="form">
@@ -95,6 +94,10 @@
                 <div  class="wrapper">
                     <span>Mobile Number:</span>
                     <div class="bg"><input type="text" class="input" name="phone" required="true" onkeypress="return isNumberKey(event)"></div>								
+                </div><br></br>
+                <div  class="wrapper">
+                    <span>GPA:</span>
+                    <div class="bg"><input type="text" class="input" name="gpa" required="true"></div>								
                 </div><br></br>
 				<div class="styled-select">
                     <span>Department:</span>
@@ -130,7 +133,7 @@
         </form>
 
     </div>
--->
+
 </div>
 <!-- end of right content-->
 
