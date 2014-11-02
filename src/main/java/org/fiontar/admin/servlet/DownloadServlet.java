@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.net.ftp.FTPClient;
-import org.fiontar.admin.algo.Assign;
+import org.fiontar.admin.allocate.Assign;
 import org.fiontar.api.Database.FTPTransfer;
 import org.fiontar.registration.Undergrad;
 import org.fiontar.registration.dao.UndergradDA;

@@ -65,7 +65,7 @@ public class UploadServlet extends HttpServlet {
         }
         Undergrad a = null;
         String path = null;
-/*
+
         if (!admin) {
 
             if (value2 == null || cookie == null) {
@@ -162,7 +162,7 @@ public class UploadServlet extends HttpServlet {
             response.sendRedirect("message.jsp?message=There was an error uploading the Resume. Make sure the file size is below 5MB and try again."
                     + "If the problem persists, please contact us via admin@rotaractmora.org or the contact form.");
 
-        }*/
+        }
 
 
     }

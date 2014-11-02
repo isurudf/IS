@@ -12,7 +12,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import org.fiontar.admin.algo.Assign;
+import org.fiontar.admin.allocate.Assign;
 import org.fiontar.registration.Undergrad;
 
 /**

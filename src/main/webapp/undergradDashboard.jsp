@@ -47,7 +47,7 @@
     <a href="preferences.jsp"><h3>NOTICE : UPDATE YOUR COMPANY PREFERENCES </h3></a>
 </div>
 <div align ="center">
-    <a href="preferences.jsp"><h5>Please order all the companies for your department according to your choice. Click here</h5></a>
+    <a href="preferences.jsp"><h5>Please order all the companies according to your choice. Click here</h5></a>
     <br/>
 </div>
 <div class="container ajax">
@@ -73,7 +73,7 @@
     <div class="four columns row">
 
         <div class="four columns row">
-            <a href = "<%="companies.jsp?field="+s.getField()%>" >
+            <a href = "companies.jsp" >
                 <p align="center">
                     <img src="images/info.png" alt="" width="100" height="150"/></p>
                 <h5 align="center">View Company Details</h5>

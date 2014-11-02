@@ -27,7 +27,7 @@ public class ForgotPwdServlet extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        /*
+        
         String link=UniqueID.generate();
         String email = request.getParameter("email");
         String message;
@@ -47,7 +47,7 @@ public class ForgotPwdServlet extends HttpServlet {
         }
         else
             message = "Sorry, there is no account associated with this email address. Please contact us via admin@rotaractmora.org if this is in error.";
-        response.sendRedirect("message.jsp?message="+ message);*/
+        response.sendRedirect("message.jsp?message="+ message);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

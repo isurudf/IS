@@ -34,7 +34,7 @@ public class UndergradCompanyServlet extends HttpServlet {
                 }
             }
         }
-        /*
+        
         PrintWriter out = response.getWriter();
         int n = Integer.parseInt(request.getParameter("num"));
         String companies="";
@@ -46,7 +46,7 @@ public class UndergradCompanyServlet extends HttpServlet {
         if(value!=null){
             UndergradDA.updateCompanies(value.substring(0,32),value.substring(32,39), companies);
         }
-        response.sendRedirect("preferences.jsp");*/
+        response.sendRedirect("preferences.jsp");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

@@ -59,7 +59,7 @@ public class EmailResend extends HttpServlet {
                 Undergrad u = UndergradDA.getUndergrad(arr[i]);
                 UndergradDA.sendVerification(u);
         }
-        /*
+        
         try {
             DatabaseConnectionHandler.closeConnection();
             Connection con = DatabaseConnectionHandler.createConnection();
@@ -97,7 +97,7 @@ public class EmailResend extends HttpServlet {
             con2.close();
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
-        }*/
+        }
         
 
 

@@ -7,7 +7,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import org.fiontar.admin.algo.Assign;
+import org.fiontar.admin.allocate.Assign;
 
 public class AssignServlet extends HttpServlet {
 

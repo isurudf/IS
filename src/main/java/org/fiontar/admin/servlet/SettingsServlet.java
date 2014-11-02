@@ -39,7 +39,7 @@ public class SettingsServlet extends HttpServlet {
                 }
             }
         }
-/*
+
         try {
             if (value2 != null) {        
                 String name = request.getParameter("firstName") + " " + request.getParameter("lastName");
@@ -53,7 +53,7 @@ public class SettingsServlet extends HttpServlet {
         } catch (Exception e) {
             System.out.println(e.getLocalizedMessage());
             response.sendRedirect("message.jsp?message=There was an error in changing your name and address. Please try again in a few minutes.");
-        }*/
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

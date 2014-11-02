@@ -41,7 +41,7 @@ public class PasswordServlet extends HttpServlet {
                 }
             }
         }
-        /*
+        
         if (value2 != null) {
 
             Undergrad u = UndergradDA.getUndergrad(value2.substring(0, 32), value2.substring(32, 39));
@@ -101,7 +101,6 @@ public class PasswordServlet extends HttpServlet {
 
         }
         response.sendRedirect("message.jsp?message="+ "Error in changing password");
-        */
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

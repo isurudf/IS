@@ -59,7 +59,7 @@ public class LoginServlet extends HttpServlet {
                 return;
         }
         if(indexNum.equals("ADMIN")){
-            response.setHeader("Refresh","0; URL=login.jsp?id=Invalid password.");
+            response.setHeader("Refresh","0; URL=index.jsp?id=Invalid password.");
             return;
         }
 
@@ -94,12 +94,12 @@ public class LoginServlet extends HttpServlet {
             {   
                 System.out.println("Undergrad log in "+indexNum+" "+password+ " failure");
                 con.close();
-                response.setHeader("Refresh","0; URL=login.jsp?id=Invalid email address or password!");
+                response.setHeader("Refresh","0; URL=index.jsp?id=Invalid email address or password!");
             }
                         
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
-            response.setHeader("Refresh","0; URL=login.jsp?id=Oops, something went wrong. Please try again!");
+            response.setHeader("Refresh","0; URL=index.jsp?id=Oops, something went wrong. Please try again!");
         }
     }
 
