@@ -49,7 +49,7 @@ public class LoginServlet extends HttpServlet {
         
         String indexNum = request.getParameter("index").toUpperCase();
         String password = sb.toString();
-        if(indexNum.equals("ADMIN")&& request.getParameter("password").equals("9271rur")){
+        if(indexNum.equals("ADMIN")&& request.getParameter("password").equals("admin123")){
                 Cookie cookie = new Cookie ("admin","rur13admin");
                 cookie.setMaxAge(30*24*60*60);
                 response.addCookie(cookie);
