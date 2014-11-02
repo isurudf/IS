@@ -24,19 +24,18 @@
     if(value==null||!value.equals("rur13admin")){
         response.setHeader("Refresh", "0; URL=login.jsp?id=You are not logged in!");
     } 
+    else{
+        Assign.initialise();
 %>
 <%@ include file="up.jsp" %>
 
 <div class = "dashboard">
-<h2></h2><br/>
-<div class = "company">
-    <a href="adminViewUsers.jsp?field=all&company=all"><h4>View Users</h4></a><br/>
-    <a href="companyStats.jsp"><h4>View Company Stats</h4></a><br/>
-    <a href="companyDashboard.jsp"><h4>Add Companies</h4></a><br/>
-    <a href="companyEdit.jsp"><h4>Edit Companies</h4></a><br/>
-    <a href="assign.jsp"><h4>Assign Interviews</h4></a><br/>
-    <a href="adminViewUsers_1.jsp"><h4>Undergrad sheets</h4></a><br/>
-    <a href="adminViewUsers_3.jsp"><h4>Company sheets</h4></a><br/>
-    <a href="logout.jsp"><h4>Logout</h4></a><br/>
-</div>
-<%@ include file="down.jsp" %>
+    <div>
+        <% 
+        String message = "Assigning interviews is completed!<br><br>Redirecting now...";
+        out.print("<h5 align=\"center\">"+message+"</h5>");
+        response.setHeader("Refresh", "3; URL=admin.jsp");
+        %>
+    </div>
+    <%@ include file="down.jsp" %>
+    <%} %>

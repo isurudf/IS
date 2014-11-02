@@ -70,16 +70,9 @@
                         <%}%>
                     </td>
                     <td>
-                        <%if(b){%>
-                        <input type="text" name="ugPref<%=a.getId() %>" value="<%=undergrads.indexOf(a.getIndex())/8 + 1 %>" />
-                        <%}else {%>
-                        <input type="text" name="ugPref<%=a.getId() %>" />
-                        <%}%>
-                    </td>
-                    <td>
                         <%
                         if(a.getResume().length()>6){
-                            out.print("<a href=\"DownloadServlet?name=Resume&path=" + u.getResume() + "\">down&nbsp;</a>");
+                            out.print("<a href=\"DownloadServlet?name=Resume&path=" + a.getResume() + "\">Download CV&nbsp;</a>");
                         }else{
                             out.print("NOCV&nbsp");
                         }
@@ -94,7 +87,7 @@
         </form>
     </div>
 </div>
-
+<a href=\"DownloadServlet?name=Resume&path=">down&nbsp;</a>
 <%
    }
 %>
