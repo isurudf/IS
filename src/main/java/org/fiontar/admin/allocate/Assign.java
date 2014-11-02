@@ -15,7 +15,8 @@ public class Assign {
 
     public static UG[] arrUG;
     public static CMP[] arrCMP;
-
+    public static int matchings = 0;
+    
     public static HashMap<Integer, UG> mapUndergrad = new HashMap<Integer, UG>();
     public static HashMap<String, CMP> mapCmp = new HashMap<String, CMP>();
 
@@ -67,6 +68,8 @@ public class Assign {
             for (UG ug : arrUG) {
                 ug.propose();   //While matching is not finished, the UGs propose to CMPs
             }
+            System.out.println("Iteration : "+(""+(100+iter)).substring(1)+ " Matchings overturned : "+matchings);
+            matchings = 0;
         }
         
         System.out.println("Number of iterations in matching : "+iter);

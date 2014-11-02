@@ -1,6 +1,7 @@
 package org.fiontar.admin.allocate;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import org.fiontar.admin.Company.Company;
 import static org.fiontar.admin.allocate.Assign.mapUndergrad;
 
@@ -45,6 +46,7 @@ public class CMP {
         for (int i = 0; i < arrUG.size(); i++) {
             if (getRank(arrUG.get(i)) > getRank(proposer)) {
                 arrUG.get(i).remove(this);
+                Assign.matchings++;
                 arrUG.set(i, proposer);
                 //System.out.println("Matched "+this.name+" and "+proposer.getName());
                 return true;
@@ -63,6 +65,7 @@ public class CMP {
                 prefUndergrads.add(ug);
             }
         }
+        Collections.shuffle(prefUndergrads);
     }
 
 }
