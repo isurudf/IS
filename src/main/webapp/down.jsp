@@ -28,13 +28,7 @@
 
                     <div class="eight columns omega">
 
-                        <ul class="social-icons">
-                            <li class="twitter"><a href="https://twitter.com/areyouready_13"><span>Twitter</span></a></li>
-                            <li class="facebook"><a href="http://www.facebook.com/rur13"><span>Facebook</span></a></li>
-
-                            <li class="youtube"><a href="http://www.youtube.com/rotaractmora"><span>Youtube</span></a></li>
-
-                        </ul><!--/ .social-icons-->	
+                        <!--/ .social-icons-->	
 
                     </div><!--/ .columns-->
 
