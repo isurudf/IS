@@ -9,7 +9,7 @@ public class Constants {
 
     public static final String DRIVER_NAME = "com.mysql.jdbc.Driver";
     
-    public static final String DB_URL = "jdbc:mysql://us-cdbr-iron-east-01.cleardb.net/heroku_a0ab4bfcf7bb090?reconnect=true"
+    public static final String DB_URL = "jdbc:mysql://us-cdbr-iron-east-01.cleardb.net/heroku_a0ab4bfcf7bb090?reconnect=true";
     public static final String DB_USERNAME = "b6463ce19bcc65";
     public static final String DB_PASSWORD = "25c07b4f";
     
